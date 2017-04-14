@@ -1,7 +1,7 @@
 <div class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" >ngEvents</a>
+      <a class="navbar-brand">Advent</a>
     </div>
 
     <div class="collapse navbar-collapse">
@@ -24,8 +24,9 @@
       </ul>
       <div class="navbar-header navbar-right">
         <ul class="nav navbar-nav">
-          <li>
-            <a [routerLink]="['user/profile']">Welcome John</a>
+          <li> 
+            <a *ngIf="!auth.isAuthenticated()" [routerLink]="['user/login']">Login</a>
+            <a *ngIf="auth.isAuthenticated()" [routerLink]="['user/profile']">Welcome {{auth.currentUser.firstName}}</a>
           </li>
         </ul>
       </div>
