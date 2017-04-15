@@ -1,17 +1,17 @@
-Angular 2 Fundamentals Course
+Advent - Easy Event App
 ========================
-This is the getting started package for the Pluralsight course on Angular 2 Fundamentals found here: http://app.pluralsight.com/courses/angular-fundamentals
+This is a simple starter package for Events Management developed on Angular 2 by Jayasankaram: http://www.jayasankaramsoft.in/
 
-**Course Status**
+**Current Status**
 
-The course is currently up-to-date.
+The tool is currently up-to-date.
 
 
 Getting Started
 ---------------
 Be sure you're running the recommended node version, which is 6.3.0+: `node --version`
 
-Follow along with the course linked above. To start the server:
+To start the server:
 
 ```
 npm install
