@@ -1,10 +1,8 @@
-import {Injectable} from '@angular/core'
+import {OpaqueToken} from '@angular/core'
 
-declare let toastr:any;
+export let TOASTR_TOKEN = new OpaqueToken('toastr')
 
-@Injectable()
-export class ToastrService{
-    success(message:any){
-        toastr.success(message);
-    }
+export interface Toastr{
+    success(msg:string,title?:string):void
 }
+
