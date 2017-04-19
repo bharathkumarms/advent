@@ -1,6 +1,6 @@
 Advent - Easy Event App
 ========================
-This is a simple starter package for Events Management developed on Angular 2 by Jayasankaram: http://www.jayasankaramsoft.in/
+This is a simple starter package for Events Management developed on Angular 2.
 
 **Current Status**
 
