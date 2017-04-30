@@ -19,7 +19,8 @@ import {
     DurationPipe,
     UpvoteComponent,
     VoterService,
-    LocationValidator
+    LocationValidator,
+    HelpdeskComponent
 } from './events/index'
 
 import {EventsAppComponent} from './events-app.component'
@@ -63,7 +64,8 @@ declare let jQuery : Object;
         SimpleModalComponent,
         ModalTriggerDirective,
         UpvoteComponent,
-        LocationValidator
+        LocationValidator,
+        HelpdeskComponent
     ],
     bootstrap:[EventsAppComponent],
     providers:[
