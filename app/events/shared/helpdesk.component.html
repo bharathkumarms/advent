@@ -1,3 +1,29 @@
-<div class="jumbotron">
-    Enter helpdesk form.
+<h3>Helpdesk</h3>
+
+<div class="col-md-12 comments">
+    <form [formGroup]="newHelpdeskForm" (ngSubmit)="saveHelpDesk(newHelpdeskForm.value)" autocomplete="off">
+        <div class="form-group" [ngClass]="{'error':comments.invalid && comments.dirty}">
+        <label for="comments">Comments:</label>
+        <em *ngIf="comments.invalid && comments.dirty">Required</em> 
+        <textarea cols="40" rows="5" formControlName="comments" id="comments" class="form-control" placeholder="Please enter your comments..."></textarea>
+        </div>
+        <button type="submit" [disabled]="newHelpdeskForm.invalid" class="btn btn-primary">Save</button>
+        <button type="button" (click)="cancelHelpdesk()" class="btn btn-default">Cancel</button>
+    </form>
+    <hr/>
+
+    <table class="table table-hover table-striped advent-table">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let comment of commentsList; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{comment}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
