@@ -12,9 +12,9 @@ export class AuthService{
       let options =  new RequestOptions({headers:headers})
       let loginInfo = {username:userName,password:password}
 
-      return this.http.post('api/login',JSON.stringify(loginInfo),options).do((response:Response)=>{
+      return this.http.post('http://localhost:53111/api/login',JSON.stringify(loginInfo),options).do((response:Response)=>{
         if(response){
-            this.currentUser = <IUser>response.json().user
+            this.currentUser = <IUser>response.json()
         }
       }).catch(error=>{
           return Observable.of(false)
